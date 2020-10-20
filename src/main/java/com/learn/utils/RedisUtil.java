@@ -20,7 +20,7 @@ public class RedisUtil {
             config.setMinEvictableIdleTimeMillis(60);
             config.setTimeBetweenEvictionRunsMillis(30);
             config.setBlockWhenExhausted(false);
-            URI uri = URI.create("redis://127.0.0.1:6379");  // 我直接在Mac上运行，不需要远程连接因此可以直接用本地回环地址
+            URI uri = URI.create("redis://127.0.0.1:6379");  
             pool = new JedisPool(config, uri, 2000, 2000);
         }
         return pool;
